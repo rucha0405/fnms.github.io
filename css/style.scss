@@ -198,7 +198,8 @@ div {
   overflow: hidden;
 
   &:hover {
-    margin-top: -5px;
+        // margin-top: -5px;
+        transform: translateY(-5px);
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
   }
 }
@@ -679,11 +680,13 @@ div {
 }
 
 #hero {
-  background: url("../img/header-bg.jpg");
+    //   background: url("../img/header-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #0aa245;
-  height: calc(100vh - 107px);
+    //   height: calc(100vh - 107px);
+    padding: 50px 0;
+    height: 100%;
   min-height: 345px;
   max-height: 831px;
   float: none;
@@ -700,6 +703,42 @@ div {
   @media (max-width: 768px) {
     font-size: 1.8em;
   }
+}
+
+.hero-column {
+    position: relative;
+    min-height: 1px;
+    margin: auto;
+    color: #fff;
+
+    img {
+        width: 100%;
+    }
+
+    h1,
+    p {
+        line-height: 1.5em
+    }
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-left-push {
+        right: 50%;
+        width: 50%;
+    }
+
+    .hero-right-push {
+        left: 50%;
+        width: 50%;
+    }
+}
+
+.h-max {
+    height: 100%;
 }
 
 #i4a7ft {
@@ -900,7 +939,7 @@ div {
 }
 
 .hover:hover {
-  margin-top: -5px;
+    transform: translateY(-5px);
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -987,6 +1026,7 @@ div {
 }
 
 .pricing-container {
+  display: flex;
   margin-top: 50px;
   margin-bottom: 50px;
 }
